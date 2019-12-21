@@ -1,0 +1,843 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8">
+<meta name="viewport"
+	content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+<title>Xem Hồ Sơ</title>
+<link rel="stylesheet"
+	href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
+<link rel="stylesheet"
+	href="/css/xemhosodangky.min.css?h=c63e89b3c3c9bf46d2111193f5b67830">
+</head>
+
+<body>
+	<div class="container" style="height: 100px">
+		<h3 style="text-align: center;">Quá trình xét duyệt hồ sơ</h3>
+
+		<div class="progress">
+			<div
+				class="progress-bar bg-success progress-bar-striped progress-bar-animated"
+				style="width: 25%">Đã đăng ký</div>
+			<div
+				class="progress-bar bg-warning progress-bar-striped progress-bar-animated"
+				style="width: 25%">Chờ duyệt</div>
+			<div
+				class="progress-bar bg-danger progress-bar-striped progress-bar-animated"
+				style="width: 25%">Trúng tuyển</div>
+			<div
+				class="progress-bar bg-blue progress-bar-striped progress-bar-animated"
+				style="width: 25%">Đang học</div>
+		</div>
+	</div>
+	<!-- Start: Projects Horizontal -->
+
+	<div class="projects-horizontal">
+		<div class="container">
+			<!-- Start: Intro -->
+			<div class="intro">
+				<h2 class="text-center" style="font-weight: bold;">Thông tin
+					tuyển sinh</h2>
+			</div>
+			<!-- End: Intro -->
+		</div>
+	</div>
+	<!-- End: Projects Horizontal -->
+	<!-- Start: THÔNG TIN CHUNG -->
+	<div class="container">
+		<div class="row">
+			<div class="col">
+				<!-- Start: THÔNG TIN CHUNG -->
+				<label class="col-form-label"
+					style="font-size: 21px; text-decoration: underline; font-weight: bold;">THÔNG
+					TIN CHUNG</label>
+				<!-- End: THÔNG TIN CHUNG -->
+			</div>
+		</div>
+	</div>
+	<!-- End: THÔNG TIN CHUNG -->
+	<!-- Start: 1 Row 2 Columns -->
+	<form th:action="@{/xemHoSoDangKyTuyenSinh}" method="post"
+		th:object="${student}">
+		<div>
+			<div class="container">
+				<div class="row" style="margin: 70px 0px 0px 0px;">
+					<!-- Start: Mã SV -->
+					<div class="col-md-6">
+						<!-- Start: Mã SV -->
+						<div class="group">
+							<input type="text" name="studentCode" th:field="*{studentCode}"
+								value="${student.studentCode}" readonly> <span
+								class="highlight"></span> <span class="bar"></span> <label
+								class="active">Mã SV</label>
+						</div>
+
+						<!-- End: Mã SV -->
+					</div>
+					<!-- End: Mã SV -->
+					<!-- Start: Họ Tên -->
+					<div class="col-md-6">
+						<!-- Start: Họ Tên -->
+						<div class="group">
+							<input type="text" name="fullName" th:field="*{fullName}"
+								value="${student.fullName}" readonly> <span
+								class="highlight"></span> <span class="bar"></span> <label
+								class="active">Họ tên</label>
+						</div>
+
+
+
+						<!-- End: Họ Tên -->
+					</div>
+					<!-- End: Họ Tên -->
+					<!-- Start: Ngày sinh -->
+					<div class="col-xl-6 offset-xl-0">
+						<!-- Start: Ngày Sinh -->
+						<div class="group">
+
+							<span class="highlight"></span> <span class="bar"></span> <label
+								class="active">Ngày sinh</label>
+						</div>
+
+
+
+						<!-- End: Ngày Sinh -->
+						<!-- Start: DatePicker -->
+						<div class="date">
+							<input placeholder="Chọn ngày" type="text" name="dateOfBirth" th:field="*{dateOfBirth}"
+							value="${student.dateOfBirth}" id="date-picker-example" class="form-control datepicker">
+						</div>
+
+
+
+
+
+						<!-- End: DatePicker -->
+					</div>
+					<!-- End: Ngày sinh -->
+					<!-- Start: Nơi Sinh -->
+					<div class="col-md-6">
+						<!-- Start: Nơi Sinh -->
+						<div class="group">
+							<input type="text" name="placeOfBirth" th:field="*{placeOfBirth}"
+								value="${student.placeOfBirth}" readonly> <span
+								class="highlight"></span> <span class="bar"></span> <label
+								class="active">Nơi sinh</label>
+						</div>
+
+
+
+						<!-- End: Nơi Sinh -->
+					</div>
+					<!-- End: Nơi Sinh -->
+					<!-- Start: Giới tính -->
+					<div class="col-xl-6 offset-xl-0">
+						<!-- Start: Giới tính -->
+						<div class="group">
+
+							<span class="highlight"></span> <span class="bar"></span> <label
+								class="active">Giới tính</label>
+						</div>
+
+
+
+						<!-- End: Giới tính -->
+						<div class="edit-radiobutton">
+							<!-- Group of default radios - option 1 -->
+							<div class="custom-control custom-radio">
+								<input type="radio" value="Nam" class="custom-control-input"
+									id="defaultGroupExample1" name="gender" checked> <label
+									class="custom-control-label" for="defaultGroupExample1">Nam</label>
+							</div>
+
+							<!-- Group of default radios - option 2 -->
+							<div class="custom-control custom-radio">
+								<input type="radio" value="Nữ" class="custom-control-input"
+									id="defaultGroupExample2" name="gender"> <label
+									class="custom-control-label" for="defaultGroupExample2">Nữ</label>
+							</div>
+
+
+						</div>
+					</div>
+					<!-- End: Giới tính -->
+					<!-- Start: Số CMND -->
+					<div class="col-md-6">
+						<!-- Start: Số CMND -->
+						<div class="group">
+							<input type="text" name="idOfStudent" th:field="*{idOfStudent}"
+								th:value="${student.idOfStudent}" readonly> <span
+								class="highlight"></span> <span class="bar"></span> <label
+								class="active">Số CMND</label>
+						</div>
+
+
+
+						<!-- End: Số CMND -->
+					</div>
+					<!-- End: Số CMND -->
+					<!-- Start: Khu vực -->
+					<div class="col-md-6">
+						<!-- Start: Khu vực -->
+						<div class="group">
+							<input type="text" name="areaCode" th:field="*{areaCode}"
+								th:value="${student.areaCode}" readonly> <span
+								class="highlight"></span> <span class="bar"></span> <label
+								class="active">Khu vực</label>
+						</div>
+
+
+
+						<!-- End: Khu vực -->
+					</div>
+					<!-- End: Khu vực -->
+					<!-- Start: Số điện thoại -->
+					<div class="col-md-6">
+						<!-- Start: Số điện thoại -->
+						<div class="group">
+							<input type="text" name="phoneNumber" th:field="*{phoneNumber}"
+								th:value="${student.phoneNumber}"
+								onkeypress="return event.charCode >= 48 && event.charCode <= 57"
+								maxlength="10" readonly> <span class="highlight"></span>
+							<span class="bar"></span> <label class="active">Số điện
+								thoại</label>
+						</div>
+
+
+
+						<!-- End: Số điện thoại -->
+					</div>
+					<!-- End: Số điện thoại -->
+					<!-- Start: Email -->
+					<div class="col-md-6">
+						<!-- Start: Email -->
+						<div class="group">
+							<input th:field="*{email}" th:value="${student.email}"
+								type="text" name="email" id="email" readonly> <span
+								class="highlight"></span> <span class="bar"></span> <label
+								class="active">Email</label> </span>
+						</div>
+
+						<!-- End: Email -->
+					</div>
+					<!-- End: Email -->
+					<!-- Start: Ngành đăng ký -->
+					<div class="col-md-6">
+						<!-- Start: Ngành đăng ký -->
+						<div class="group">
+							<span class="highlight"></span> <span class="bar"></span> <label
+								class="active">Ngành đăng ký</label>
+						</div>
+
+
+
+						<!-- End: Ngành đăng ký -->
+						<!-- Start: Ngành đăng ký -->
+						<div class="edit-1">
+							<select class="mdb-select colorful-select dropdown-info"
+								name="majorRegistration" th:field="*{majorRegistration}"
+								th:value="${student.majorRegistration}">
+								<option value="Kỹ thuật phần mềm">Kỹ thuật phần mềm</option>
+								<option value="Truyền thông và mạng máy tính">Truyền
+									thông và mạng máy tính</option>
+								<option value="Ngôn ngữ Nhật">Ngôn ngữ Nhật</option>
+								<option value="Ngôn ngữ Anh">Ngôn ngữ Anh</option>
+								<option value="Lập trình nhúng">Lập trình nhúng</option>
+							</select> <label class="mdb-main-label">Chọn ngành</label>
+						</div>
+
+
+
+						<!-- End: Ngành đăng ký -->
+					</div>
+					<!-- End: Ngành đăng ký -->
+				</div>
+			</div>
+		</div>
+		<!-- End: 1 Row 2 Columns -->
+		<!-- Start: THÔNG TIN HỘ KHẨU -->
+		<div class="container">
+			<div class="row">
+				<div class="col">
+					<!-- Start: THÔNG TIN HỘ KHẨU -->
+					<label class="col-form-label"
+						style="font-size: 21px; text-decoration: underline; font-weight: bold;">THÔNG
+						TIN HỘ KHẨU</label>
+					<!-- End: THÔNG TIN HỘ KHẨU -->
+				</div>
+			</div>
+		</div>
+		<!-- End: THÔNG TIN HỘ KHẨU -->
+		<!-- Start: 1 Row 2 Columns -->
+		<div>
+			<div class="container">
+				<div class="row" style="margin: 70px 0px 0px 0px;">
+					<!-- Start: Địa chỉ -->
+					<div class="col-md-6">
+						<!-- Start: Địa chỉ -->
+						<div class="group">
+							<input type="text" name="address" th:field="*{address}"
+								th:value="${student.address}" readonly> <span
+								class="highlight"></span> <span class="bar"></span> <label
+								class="active">Địa chỉ</label>
+						</div>
+
+
+
+						<!-- End: Địa chỉ -->
+					</div>
+					<!-- End: Địa chỉ -->
+					<!-- Start: Phường xã -->
+					<div class="col-md-6">
+						<!-- Start: Phường xã -->
+						<div class="group">
+							<input type="text" name="subDistrict" th:field="*{subDistrict}"
+								th:value="${student.subDistrict}" readonly> <span
+								class="highlight"></span> <span class="bar"></span> <label
+								class="active">Phường xã</label>
+						</div>
+
+
+
+						<!-- End: Phường xã -->
+					</div>
+					<!-- End: Phường xã -->
+					<!-- Start: Quận huyện -->
+					<div class="col-md-6">
+						<!-- Start: Quận huyện -->
+						<div class="group">
+							<input type="text" name="district" th:field="*{district}"
+								th:value="${student.district}" readonly> <span
+								class="highlight"></span> <span class="bar"></span> <label
+								class="active">Quận huyện</label>
+						</div>
+
+
+
+						<!-- End: Quận huyện -->
+					</div>
+					<!-- End: Quận huyện -->
+					<!-- Start: Tỉnh thành -->
+					<div class="col-md-6">
+						<!-- Start: Tỉnh thành -->
+						<div class="group">
+							<input type="text" name="province" th:field="*{province}"
+								th:value="${student.province}" readonly> <span
+								class="highlight"></span> <span class="bar"></span> <label
+								class="active">Tỉnh thành</label>
+						</div>
+
+
+
+						<!-- End: Tỉnh thành -->
+					</div>
+					<!-- End: Tỉnh thành -->
+				</div>
+			</div>
+		</div>
+		<!-- End: 1 Row 2 Columns -->
+		<!-- Start: THÔNG TIN HỒ SƠ -->
+		<div class="container">
+			<div class="row">
+				<div class="col">
+					<!-- Start: THÔNG TIN HỘ KHẨU -->
+					<label class="col-form-label"
+						style="font-size: 21px; text-decoration: underline; font-weight: bold;">THÔNG
+						TIN HỒ SƠ</label>
+					<!-- End: THÔNG TIN HỘ KHẨU -->
+				</div>
+			</div>
+		</div>
+		<!-- End: THÔNG TIN HỒ SƠ -->
+		<!-- Start: 1 Row 1 Columns -->
+		<div>
+			<div class="container">
+				<div class="row" style="margin: 70px 0px 0px 0px;">
+					<div class="col">
+						<!-- Material inline 1 -->
+						<div class="form-check form-check-inline">
+							<input type="checkbox" class="form-check-input"
+								id="materialInline1"> <label class="form-check-label"
+								for="materialInline1">Phiếu đăng ký</label>
+						</div>
+
+						<!-- Material inline 2 -->
+						<div class="form-check form-check-inline">
+							<input type="checkbox" class="form-check-input"
+								id="materialInline2"> <label class="form-check-label"
+								for="materialInline2">Giấy ưu tiên</label>
+						</div>
+
+
+
+					</div>
+					<div class="col">
+
+						<!-- Material inline 3 -->
+						<div class="form-check form-check-inline" style="width: 100px">
+							<input type="checkbox" class="form-check-input"
+								id="materialInline3"> <label class="form-check-label"
+								for="materialInline3">Học bạ</label>
+						</div>
+
+						<div class="form-check form-check-inline">
+							<input type="checkbox" class="form-check-input"
+								id="materialInline4"> <label class="form-check-label"
+								for="materialInline4">Bằng tốt nghiệp</label>
+						</div>
+
+					</div>
+					<div class="col">
+						<!-- Material inline 1 -->
+						<div class="form-check form-check-inline">
+							<input type="checkbox" class="form-check-input"
+								id="materialInline5"> <label class="form-check-label"
+								for="materialInline5">Giấy chứng nhận tốt nghiệp</label>
+						</div>
+
+						<!-- Material inline 2 -->
+						<div class="form-check form-check-inline">
+							<input type="checkbox" class="form-check-input"
+								id="materialInline6"> <label class="form-check-label"
+								for="materialInline6">Bản sao chứng minh nhân dân</label>
+						</div>
+
+
+
+					</div>
+					<div class="col">
+						<!-- Material inline 3 -->
+						<div class="form-check form-check-inline" style="width: 100px">
+							<input type="checkbox" class="form-check-input"
+								id="materialInline7"> <label class="form-check-label"
+								for="materialInline7">Ảnh 4x6</label>
+						</div>
+
+						<div class="form-check form-check-inline">
+							<input type="checkbox" class="form-check-input"
+								id="materialInline8"> <label class="form-check-label"
+								for="materialInline8">Giấy khai sinh</label>
+						</div>
+
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- End: 1 Row 1 Columns -->
+		<!-- Start: THÔNG TIN PHỤ HUYNH -->
+		<div class="container">
+			<div class="row">
+				<div class="col">
+					<!-- Start: THÔNG TIN HỘ KHẨU -->
+					<label class="col-form-label"
+						style="font-size: 21px; text-decoration: underline; font-weight: bold;">THÔNG
+						TIN PHỤ HUYNH</label>
+					<!-- End: THÔNG TIN HỘ KHẨU -->
+				</div>
+			</div>
+		</div>
+		<!-- End: THÔNG TIN PHỤ HUYNH -->
+		<!-- Start: 1 Row 2 Columns -->
+		<div>
+			<div class="container">
+				<div class="row" style="margin: 70px 0px 0px 0px;">
+					<!-- Start: Họ tên cha -->
+					<div class="col-md-6">
+						<!-- Start: Họ tên cha -->
+						<div class="group">
+							<input type="text" name="nameOfFather" th:field="*{nameOfFather}"
+								th:value="${student.nameOfFather}" readonly> <span
+								class="highlight"></span> <span class="bar"></span> <label
+								class="active">Họ tên cha</label>
+						</div>
+
+
+
+						<!-- End: Họ tên cha -->
+					</div>
+					<!-- End: Họ tên cha -->
+					<!-- Start: Số điện thoại -->
+					<div class="col-md-6">
+						<!-- Start: Số điện thoại -->
+						<div class="group">
+							<input type="text" name="phoneNumberOfFather"
+								onkeypress="return event.charCode >= 48 && event.charCode <= 57"
+								maxlength="10" th:field="*{phoneNumberOfFather}"
+								th:value="${student.phoneNumberOfFather}" readonly> <span
+								class="highlight"></span> <span class="bar"></span> <label
+								class="active">Số điện thoại</label>
+						</div>
+
+
+
+						<!-- End: Số điện thoại -->
+					</div>
+					<!-- End: Số điện thoại -->
+					<!-- Start: Họ tên mẹ -->
+					<div class="col-md-6">
+						<!-- Start: Họ tên mẹ -->
+						<div class="group">
+							<input type="text" name="nameOfMother" th:field="*{nameOfMother}"
+								th:value="${student.nameOfMother}" readonly> <span
+								class="highlight"></span> <span class="bar"></span> <label
+								class="active">Họ tên mẹ</label>
+						</div>
+
+
+
+						<!-- End: Họ tên mẹ -->
+					</div>
+					<!-- End: Họ tên mẹ -->
+					<!-- Start: Số điện thoại -->
+					<div class="col-md-6">
+						<!-- Start: Số điện thoại -->
+						<div class="group">
+							<input type="text" name="phoneNumberOfMother"
+								th:field="*{phoneNumberOfMother}"
+								th:value="${student.phoneNumberOfMother}"
+								onkeypress="return event.charCode >= 48 && event.charCode <= 57"
+								maxlength="10" readonly> <span class="highlight"></span>
+							<span class="bar"></span> <label class="active">Số điện
+								thoại</label>
+						</div>
+
+
+
+						<!-- End: Số điện thoại -->
+					</div>
+					<!-- End: Số điện thoại -->
+				</div>
+			</div>
+		</div>
+		<!-- End: 1 Row 2 Columns -->
+		<!-- Start: ĐIỂM HỌC BẠ -->
+		<div class="container">
+			<div class="row">
+				<div class="col">
+					<!-- Start: ĐIỂM HỌC BẠ -->
+					<label class="col-form-label"
+						style="font-size: 21px; text-decoration: underline; font-weight: bold;">ĐIỂM
+						HỌC BẠ</label>
+					<!-- End: ĐIỂM HỌC BẠ -->
+				</div>
+			</div>
+		</div>
+		<!-- End: ĐIỂM HỌC BẠ -->
+		<!-- Start: 1 Row 2 Columns -->
+		<div>
+			<div class="container">
+				<div class="row" style="margin: 70px 0px 0px 0px;">
+					<!-- Start: Toán -->
+					<div class="col-md-6">
+						<!-- Start: Toán -->
+						<div class="group">
+							<input type="text" name="mathScoresInSchoolReport"
+								th:field="*{mathScoresInSchoolReport}"
+								th:value="${student.mathScoresInSchoolReport}" readonly>
+							<span class="highlight"></span> <span class="bar"></span> <label
+								class="active">Toán</label>
+						</div>
+
+
+
+						<!-- End: Toán -->
+					</div>
+					<!-- End: Toán -->
+					<!-- Start: Lý -->
+					<div class="col-md-6">
+						<!-- Start: Lý -->
+						<div class="group">
+							<input type="text" name="physicsScoresInSchoolReport"
+								th:field="*{physicsScoresInSchoolReport}"
+								th:value="${student.physicsScoresInSchoolReport}" readonly>
+							<span class="highlight"></span> <span class="bar"></span> <label
+								class="active">Lý</label>
+						</div>
+
+
+
+						<!-- End: Lý -->
+					</div>
+					<!-- End: Lý -->
+					<!-- Start: Hóa -->
+					<div class="col-md-6">
+						<!-- Start: Hóa -->
+						<div class="group">
+							<input type="text" name="chemistryScoresInSchoolReport"
+								th:field="*{chemistryScoresInSchoolReport}"
+								th:value="${student.chemistryScoresInSchoolReport}" readonly>
+							<span class="highlight"></span> <span class="bar"></span> <label
+								class="active">Hóa</label>
+						</div>
+
+
+
+						<!-- End: Hóa -->
+					</div>
+					<!-- End: Hóa -->
+					<!-- Start: Văn -->
+					<div class="col-md-6">
+						<!-- Start: Văn -->
+						<div class="group">
+							<input type="text" name="literaryScoresInSchoolReport"
+								th:field="*{literaryScoresInSchoolReport}"
+								th:value="${student.literaryScoresInSchoolReport}" readonly>
+							<span class="highlight"></span> <span class="bar"></span> <label
+								class="active">Văn</label>
+						</div>
+
+
+
+						<!-- End: Văn -->
+					</div>
+					<!-- End: Văn -->
+				</div>
+			</div>
+		</div>
+		<!-- End: 1 Row 2 Columns -->
+
+		<!-- Start: ĐIỂM THI TỐT NGHIỆP -->
+		<div class="container">
+			<div class="row">
+				<div class="col">
+					<!-- Start: ĐIỂM THI TỐT NGHIỆP -->
+					<label class="col-form-label"
+						style="font-size: 21px; text-decoration: underline; font-weight: bold;">ĐIỂM
+						THI TỐT NGHIỆP</label>
+					<!-- End: ĐIỂM THI TỐT NGHIỆP -->
+				</div>
+			</div>
+		</div>
+		<!-- End: ĐIỂM THI TỐT NGHIỆP -->
+		<!-- Start: 1 Row 2 Columns -->
+		<div>
+			<div class="container">
+				<div class="row" style="margin: 70px 0px 0px 0px;">
+					<!-- Start: Toán -->
+					<div class="col-md-6">
+						<!-- Start: Toán -->
+						<div class="group">
+							<input type="text" name="mathScoresOfGraduationTest"
+								th:field="*{mathScoresOfGraduationTest}"
+								th:value="${student.mathScoresOfGraduationTest}" readonly>
+							<span class="highlight"></span> <span class="bar"></span> <label
+								class="active">Toán</label>
+						</div>
+
+
+
+						<!-- End: Toán -->
+					</div>
+					<!-- End: Toán -->
+					<!-- Start: Lý -->
+					<div class="col-md-6">
+						<!-- Start: Lý -->
+						<div class="group">
+							<input type="text" name="physicsScoresOfGraduationTest"
+								th:field="*{physicsScoresOfGraduationTest}"
+								th:value="${student.physicsScoresOfGraduationTest}" readonly>
+							<span class="highlight"></span> <span class="bar"></span> <label
+								class="active">Lý</label>
+						</div>
+
+
+
+						<!-- End: Lý -->
+					</div>
+					<!-- End: Lý -->
+					<!-- Start: Hóa -->
+					<div class="col-md-6">
+						<!-- Start: Hóa -->
+						<div class="group">
+							<input type="text" name="chemistryScoresOfGraduationTest"
+								th:field="*{chemistryScoresOfGraduationTest}"
+								th:value="${student.chemistryScoresOfGraduationTest}" readonly>
+							<span class="highlight"></span> <span class="bar"></span> <label
+								class="active">Hóa</label>
+						</div>
+
+
+
+						<!-- End: Hóa -->
+					</div>
+					<!-- End: Hóa -->
+					<!-- Start: Văn -->
+					<div class="col-md-6">
+						<!-- Start: Văn -->
+						<div class="group">
+							<input type="text" name="literaryScoresOfGraduationTest"
+								th:field="*{literaryScoresOfGraduationTest}"
+								th:value="${student.literaryScoresOfGraduationTest}" readonly>
+							<span class="highlight"></span> <span class="bar"></span> <label
+								class="active">Văn</label>
+						</div>
+
+
+
+						<!-- End: Văn -->
+					</div>
+					<!-- End: Văn -->
+				</div>
+			</div>
+		</div>
+		<!-- End: 1 Row 2 Columns -->
+		<!-- Start: HỌC CẤP 3 TẠI -->
+		<div class="container">
+			<div class="row">
+				<div class="col">
+					<!-- Start: HỌC CẤP 3 TẠI -->
+					<label class="col-form-label"
+						style="font-size: 21px; text-decoration: underline; font-weight: bold;">HỌC
+						CẤP 3 TẠI</label>
+					<!-- End: HỌC CẤP 3 TẠI -->
+				</div>
+			</div>
+		</div>
+		<!-- End: HỌC CẤP 3 TẠI -->
+		<!-- Start: 1 Row 2 Columns -->
+		<div>
+			<div class="container">
+				<div class="row" style="margin: 70px 0px 0px 0px;">
+					<!-- Start: Tên trường -->
+					<div class="col-md-6">
+						<!-- Start: Tên trường -->
+						<div class="group">
+							<input type="text" name="subDistrictSchool"
+								th:field="*{subDistrictSchool}"
+								th:value="${student.subDistrictSchool}" readonly> <span
+								class="highlight"></span> <span class="bar"></span> <label
+								class="active">Tên trường</label>
+						</div>
+
+
+
+						<!-- End: Tên trường -->
+					</div>
+					<!-- End: Tên trường -->
+					<!-- Start: Phường xã -->
+					<div class="col-md-6">
+						<!-- Start: Phường xã -->
+						<div class="group">
+							<input type="text" name="addressSchool"
+								th:field="*{addressSchool}" th:value="${student.addressSchool}"
+								readonly> <span class="highlight"></span> <span
+								class="bar"></span> <label class="active">Phường xã</label>
+						</div>
+
+
+
+						<!-- End: Phường xã -->
+					</div>
+					<!-- End: Phường xã -->
+					<!-- Start: Quận huyện -->
+					<div class="col-md-6">
+						<!-- Start: Quận huyện -->
+						<div class="group">
+							<input type="text" name="districtSchool"
+								th:field="*{districtSchool}"
+								th:value="${student.districtSchool}" readonly> <span
+								class="highlight"></span> <span class="bar"></span> <label
+								class="active">Quận huyện</label>
+						</div>
+
+
+
+						<!-- End: Quận huyện -->
+					</div>
+					<!-- End: Quận huyện -->
+					<!-- Start: Thành phố -->
+					<div class="col-md-6">
+						<!-- Start: Thành phố -->
+						<div class="group">
+							<input type="text" name="provinceSchool"
+								th:field="*{provinceSchool}"
+								th:value="${student.provinceSchool}" readonly> <span
+								class="highlight"></span> <span class="bar"></span> <label
+								class="active">Thành phố</label>
+						</div>
+
+
+
+						<!-- End: Thành phố -->
+					</div>
+					<!-- End: Thành phố -->
+				</div>
+			</div>
+		</div>
+		<!-- End: 1 Row 2 Columns -->
+		<!-- Start: THÔNG TIN KHÁC -->
+		<div class="container">
+			<div class="row">
+				<div class="col">
+					<!-- Start: THÔNG TIN KHÁC -->
+					<label class="col-form-label"
+						style="font-size: 21px; text-decoration: underline; font-weight: bold;"><strong>THÔNG
+							TIN KHÁC</strong></label>
+					<!-- End: THÔNG TIN KHÁC -->
+				</div>
+			</div>
+		</div>
+		<!-- End: THÔNG TIN KHÁC -->
+		<!-- Start: 1 Row 2 Columns -->
+		<div>
+			<div class="container">
+				<div class="row" style="margin: 70px 0px 0px 0px;">
+					<!-- Start: Địa chỉ trọ -->
+					<div class="col-md-6">
+						<!-- Start: Địa chỉ trọ -->
+						<div class="group">
+							<input type="text" name="addressNow" th:field="*{addressNow}"
+								th:value="${student.addressNow}" readonly> <span
+								class="highlight"></span> <span class="bar"></span> <label
+								class="active">Địa chỉ trọ</label>
+						</div>
+
+
+
+						<!-- End: Địa chỉ trọ -->
+					</div>
+					<!-- End: Địa chỉ trọ -->
+					<!-- Start: Ghi chú -->
+					<div class="col-md-6">
+						<!-- Start: Ghi chú -->
+						<div class="group">
+							<input type="text" name="notes" th:field="*{notes}"
+								th:value="${student.notes}" readonly> <span
+								class="highlight"></span> <span class="bar"></span> <label
+								class="active">Ghi chú</label>
+						</div>
+						<!-- End: Ghi chú -->
+					</div>
+					<!-- End: Ghi chú -->
+				</div>
+			</div>
+		</div>
+		<!-- End: 1 Row 2 Columns -->
+		<!-- Start: 1 Row 1 Column Lưu -->
+		<div>
+			<div class="container">
+				<button class="btn btn-outline-primary btn-rounded waves-effect">
+					<a th:href="@{/index}">Quay lại</a>
+				</button>
+			</div>
+		</div>
+	</form>
+	<!-- End: 1 Row 1 Column Lưu -->
+
+
+	<script
+		src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script
+		src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
+	<script
+		src="/js/dangkytuyensinh.min.js?h=0b948df7679aa160a56561158e46eac6"></script>
+	<script
+		src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script
+		src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
+	<script
+		src="/js/xemhosodangky.min.js?h=0e2ae38a42b261865944f3d2493d5f2e"></script>
+</body>
+
+</html>

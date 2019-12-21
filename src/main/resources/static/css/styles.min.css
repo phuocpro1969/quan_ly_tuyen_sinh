@@ -1,0 +1,459 @@
+.footer-basic ul a, .mega-dropdown-menu>li ul>li>a:focus,
+	.mega-dropdown-menu>li ul>li>a:hover {
+	text-decoration: none
+}
+
+.footer-basic {
+	padding: 40px 0;
+	background: linear-gradient(120deg, #fff, #003262)
+}
+
+.footer-basic ul {
+	padding: 0;
+	list-style: none;
+	text-align: center;
+	font-size: 18px;
+	line-height: 1.6;
+	margin-bottom: 0
+}
+
+.footer-basic li {
+	padding: 0 10px
+}
+
+.footer-basic ul a {
+	color: inherit;
+	opacity: .8
+}
+
+.footer-basic ul a:hover {
+	opacity: 1
+}
+
+.footer-basic .social {
+	text-align: center;
+	padding-bottom: 25px
+}
+
+.footer-basic .social>a {
+	font-size: 24px;
+	width: 40px;
+	height: 40px;
+	line-height: 40px;
+	display: inline-block;
+	text-align: center;
+	border-radius: 50%;
+	border: 1px solid #ccc;
+	margin: 0 8px;
+	color: inherit;
+	opacity: .75
+}
+
+.footer-basic .social>a:hover {
+	opacity: .9
+}
+
+.footer-basic .copyright {
+	margin-top: 15px;
+	text-align: center;
+	font-size: 13px;
+	color: #aaa;
+	margin-bottom: 0
+}
+
+input[type=checkbox].css-checkbox {
+	position: absolute;
+	z-index: -1000;
+	left: -1000px;
+	overflow: hidden;
+	clip: rect(0, 0, 0, 0);
+	height: 1px;
+	width: 1px;
+	margin: -1px;
+	padding: 0;
+	border: 0
+}
+
+input[type=checkbox].css-checkbox+label.css-label {
+	padding-left: 35px;
+	height: 15px;
+	width: 15px;
+	display: inline-block;
+	line-height: 30px;
+	background-repeat: no-repeat;
+	background-position: 0 0;
+	vertical-align: middle;
+	cursor: pointer
+}
+
+input[type=checkbox].css-checkbox:checked+label.css-label {
+	background-position: 0 -30px
+}
+
+label.css-label {
+	background-image:
+		url(http://csscheckbox.com/checkboxes/u/csscheckbox_2e5ac342c462fb9a5023b3d13705e60b.png);
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none
+}
+
+.navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:focus,
+	.navbar-default .navbar-nav>.active>a:hover {
+	background-color: transparent
+}
+
+li.active {
+	background: #C4820E;
+	box-shadow: 0 1px 0 0 #C4820E;
+	height: 1px;
+	width: 20px;
+	border-radius: 50%;
+	display: inline-block
+}
+
+.navbar-default .navbar-nav>.active>a {
+	background-color: #00B16A;
+	box-shadow: 0 1px 0 0 #00B16A;
+	background-image: none
+}
+
+.dropdown-menu>li>a:focus, .dropdown-menu>li>a:hover {
+	text-decoration: none;
+	color: #fff;
+	background-color: #2c3e50
+}
+
+button.btn.btn-default.login {
+	padding: 5px;
+	width: 90%;
+	border-radius: 0;
+	height: 2em;
+	background: #26C281;
+	border: 0;
+	margin: 5px 10px
+}
+
+input.styled {
+	background: #888 !important;
+	border: none !important;
+	color: #000 !important
+}
+
+.checkbox:before {
+	border-radius: 0
+}
+
+nav.navbar.navbar-default.navbar-fixed-top {
+	background: #26C281;
+	border: 0;
+	color: #fff
+}
+
+.checkbox label, .radio label {
+	color: gray
+}
+
+.checkbox, .radio {
+	float: left;
+	margin: 5px 10px
+}
+
+.register, .remember {
+	float: right;
+	margin: 5px 20px 5px 10px
+}
+
+.form-group {
+	margin-bottom: 15px;
+	width: 300px
+}
+
+.input-login {
+	width: 90%;
+	margin: 5px 10px
+}
+
+.navbar-default .navbar-nav>li>a:hover {
+	background: #00B16A
+}
+
+.navbar-default .navbar-nav>.open>a, .navbar-default .navbar-nav>.open>a:focus,
+	.navbar-default .navbar-nav>.open>a:hover {
+	background-color: #00B16A;
+	color: #fff
+}
+
+#brand-logo {
+	font-size: 34px
+}
+
+#app-navbar {
+	background: linear-gradient(120deg, #fff, #003262)
+}
+
+body {
+	font-family: 'Open Sans', sans-serif
+}
+
+.mega-dropdown {
+	position: static !important
+}
+
+.mega-dropdown-menu {
+	padding: 20px 0;
+	width: 100%;
+	box-shadow: none;
+	-webkit-box-shadow: none
+}
+
+.mega-dropdown-menu>li>ul {
+	padding: 0;
+	margin: 0
+}
+
+.mega-dropdown-menu>li>ul>li {
+	list-style: none
+}
+
+.mega-dropdown-menu>li>ul>li>a {
+	display: block;
+	color: #222;
+	padding: 3px 5px
+}
+
+.mega-dropdown-menu .dropdown-header {
+	font-size: 18px;
+	color: #ff3546;
+	padding: 5px 60px 5px 5px;
+	line-height: 30px
+}
+
+.carousel-control {
+	width: 30px;
+	height: 30px;
+	top: -35px
+}
+
+.left.carousel-control {
+	right: 30px;
+	left: inherit
+}
+
+.carousel-control .glyphicon-chevron-left, .carousel-control .glyphicon-chevron-right
+	{
+	font-size: 12px;
+	background-color: #fff;
+	line-height: 30px;
+	text-shadow: none;
+	color: #333;
+	border: 1px solid #ddd
+}
+
+header {
+	position: relative;
+	background-color: #000;
+	height: 75vh;
+	min-height: 25rem;
+	width: 100%;
+	overflow: hidden
+}
+
+header video {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	min-width: 100%;
+	min-height: 100%;
+	width: auto;
+	height: auto;
+	z-index: 0;
+	-ms-transform: translateX(-50%) translateY(-50%);
+	-moz-transform: translateX(-50%) translateY(-50%);
+	-webkit-transform: translateX(-50%) translateY(-50%);
+	transform: translateX(-50%) translateY(-50%)
+}
+
+header .container {
+	position: relative;
+	z-index: 2
+}
+
+header .overlay {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	background-color: #000;
+	opacity: .5;
+	z-index: 1
+}
+
+@media ( pointer :coarse) and (hover:none) {
+	header {
+		background: url(https://source.unsplash.com/XT5OInaElMw/1600x900) center
+			center no-repeat #000
+	}
+	header video {
+		display: none
+	}
+}
+
+.navbar--opened .navbar--apple::before {
+	height: 100%
+}
+
+.navbar--apple::before {
+	background: rgba(0, 0, 0, .8);
+	transition: height .2s ease-in;
+	height: 50px;
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	content: '';
+	z-index: -1
+}
+
+.navbar--opened .navbar--apple::before {
+	background: rgba(0, 0, 0, .93)
+}
+
+.icon-bar {
+	width: 100%;
+	background-color: #555;
+	overflow: auto
+}
+
+.icon-bar a {
+	float: left;
+	width: 20%;
+	text-align: center;
+	padding: 12px 0;
+	transition: all .3s ease;
+	color: #fff;
+	font-size: 36px
+}
+
+.icon-bar a:hover {
+	background-color: #000
+}
+
+.active {
+	background-color: #4CAF50;
+}
+
+.navbar--apple .nav-link {
+	color: #fff !important;
+	font-size: 13px
+}
+
+.navbar--apple .apple-logo {
+	font-size: 21px;
+	line-height: 0
+}
+
+.navbar--apple {
+	background-color: initial !important
+}
+
+.navbar--apple .navbar-toggler {
+	padding: 0;
+	font-size: 1.25rem;
+	line-height: 1;
+	border: 0;
+	border-radius: 0
+}
+
+.navbar--apple .navbar-toggler-icon {
+	background-image: none;
+	line-height: 2rem
+}
+
+@media ( max-width :576px) {
+	.navbar--apple #menu {
+		padding-left: 40px;
+		padding-right: 40px
+	}
+	.navbar--apple #menu li a {
+		font-size: 17px;
+		border-bottom: 1px solid rgba(255, 255, 255, .1)
+	}
+}
+
+.navigation-clean {
+	background: #fff;
+	padding-top: .75rem;
+	padding-bottom: .75rem;
+	color: #333;
+	border-radius: 0;
+	box-shadow: none;
+	border: none;
+	margin-bottom: 0
+}
+
+@media ( min-width :768px) {
+	.navbar--apple::before {
+		height: 50px !important
+	}
+	.navigation-clean {
+		padding-top: 1rem;
+		padding-bottom: 1rem
+	}
+}
+
+.navigation-clean .navbar-brand {
+	font-weight: 700;
+	color: inherit
+}
+
+.navigation-clean .navbar-brand:hover {
+	color: #222
+}
+
+.navigation-clean .navbar-toggler {
+	border-color: #ddd;
+	color: #888
+}
+
+.navigation-clean .navbar-toggler:focus, .navigation-clean .navbar-toggler:hover
+	{
+	background: 0 0
+}
+
+.navigation-clean .form-inline, .navigation-clean .navbar-collapse {
+	border-top-color: #ddd
+}
+
+.navigation-clean.navbar-light .navbar-nav .nav-link.active,
+	.navigation-clean.navbar-light .navbar-nav .nav-link.active:focus,
+	.navigation-clean.navbar-light .navbar-nav .nav-link.active:hover {
+	color: #8f8f8f;
+	box-shadow: none;
+	background: 0 0;
+	pointer-events: none
+}
+
+.navigation-clean.navbar .navbar-nav .nav-link {
+	padding-left: 18px;
+	padding-right: 18px
+}
+
+.navigation-clean.navbar-light .navbar-nav .nav-link {
+	color: #465765
+}
+
+.navigation-clean.navbar-light .navbar-nav .nav-link:focus,
+	.navigation-clean.navbar-light .navbar-nav .nav-link:hover {
+	color: #37434d !important;
+	background-color: transparent
+}
+
+.top-menu-button {
+	height: 50px
+}

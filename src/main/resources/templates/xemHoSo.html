@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8">
+<meta name="viewport"
+	content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+<title>Xem Hồ Sơ</title>
+<link rel="stylesheet"
+	href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
+<link rel="stylesheet"
+	href="/css/xemHoSo.min.css?h=dc646775e70fb56763d5f03c4c84fda5">
+</head>
+
+<body>
+	<!-- Start: Login Form Dark -->
+	<div class="login-dark">
+		<form th:action="@{/xemHoSo}" method="post" th:object="${student}">
+			<h2 class="sr-only">Login Form</h2>
+
+			<div class="illustration">
+				<a href="/"><img
+					src="/img/logo-dai-hoc-gia-dinh-1.png?h=301ef842ffb30c130a90fa69d41da2e6"
+					style="max-width: 100%;"></a>
+			</div>
+			<div class="form-group"
+				th:classappend="${#fields.hasErrors('email')}? 'has-error':''">
+				<input class="form-control" th:field="*{email}" type="text"
+					name="email" placeholder="Email">
+				<p class="error-message" style="color: red;"
+					th:each="error : ${#fields.errors('email')}" th:text="${error}">Validation
+					error</p>
+			</div>
+
+			<div class="form-group">
+				<button class="btn btn-primary btn-block" type="submit">Xem
+					hồ sơ</button>
+			</div>
+			<div>
+				<a th:href="@{/index}" class="forgot">Quay lại</a>
+			</div>
+
+		</form>
+	</div>
+	<!-- End: Login Form Dark -->
+	<script
+		src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script
+		src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
