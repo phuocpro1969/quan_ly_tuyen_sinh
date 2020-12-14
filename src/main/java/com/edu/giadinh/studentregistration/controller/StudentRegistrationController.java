@@ -24,7 +24,7 @@ public class StudentRegistrationController {
 
 	@Autowired
 	private StudentRegistrationService studentRegistrationService;
-	
+
 	@Autowired
 	private EmailService emailService;
 
@@ -32,8 +32,7 @@ public class StudentRegistrationController {
 	public StudentRegistrationDto stuDto() {
 		return new StudentRegistrationDto();
 	}
-	
-	
+
 	@RequestMapping(value = { "/", "/index" }, method = RequestMethod.GET)
 	public ModelAndView home() {
 		ModelAndView modelAndView = new ModelAndView();
@@ -49,7 +48,8 @@ public class StudentRegistrationController {
 	}
 
 	@RequestMapping(value = "/dangkytuyensinh", method = RequestMethod.POST)
-	public ModelAndView dangKyTuyenSinh(@ModelAttribute("student") @Valid StudentRegistrationDto stuDto,BindingResult result) throws Exception {
+	public ModelAndView dangKyTuyenSinh(@ModelAttribute("student") @Valid StudentRegistrationDto stuDto,
+			BindingResult result) throws Exception {
 		ModelAndView modelAndView = new ModelAndView();
 		StudentRegistration existingEmail = studentRegistrationService.findByEmail(stuDto.getEmail());
 		if (existingEmail != null) {
@@ -60,11 +60,11 @@ public class StudentRegistrationController {
 			return modelAndView;
 		}
 		studentRegistrationService.save(stuDto);
-		
+
 		Mail mail = new Mail();
 		mail.setFrom("user1@testmail.com");
 		mail.setTo(stuDto.getEmail());
-		mail.setSubject("[GDU]-ĐH Gia Định");
+		mail.setSubject("UIT");
 
 		Map<String, Object> model = new HashMap<>();
 		model.put("stu", stuDto);
@@ -74,6 +74,5 @@ public class StudentRegistrationController {
 		modelAndView.setViewName("index");
 		return modelAndView;
 	}
-
 
 }
